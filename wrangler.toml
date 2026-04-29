@@ -1,0 +1,13 @@
+name = "sns-studio"
+compatibility_date = "2024-04-03"
+compatibility_flags = ["nodejs_compat"]
+pages_build_output_dir = ".vercel/output"
+
+[[d1_databases]]
+binding = "DB" # 전역 규칙: env.DB로 접근
+database_name = "sns_studio_db"
+database_id = "PASTE_YOUR_D1_DATABASE_ID_HERE"
+
+[[r2_buckets]]
+binding = "BUCKET" # 전역 규칙: env.BUCKET으로 접근
+bucket_name = "sns_studio_bucket"

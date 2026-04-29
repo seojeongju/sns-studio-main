@@ -1,0 +1,38 @@
+{
+  "name": "sns-studio",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "pages:build": "npx @cloudflare/next-on-pages",
+    "preview": "npm run pages:build && wrangler pages dev .vercel/output --compatibility-date=2024-04-03 --compatibility-flags=nodejs_compat",
+    "deploy": "npm run pages:build && wrangler pages deploy .vercel/output"
+  },
+  "dependencies": {
+    "next": "14.2.3",
+    "react": "^18",
+    "react-dom": "^18",
+    "lucide-react": "^0.378.0",
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^2.3.0",
+    "drizzle-orm": "^0.30.10",
+    "@libsql/client": "^0.6.0"
+  },
+  "devDependencies": {
+    "typescript": "^5",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.3",
+    "wrangler": "^3.55.0",
+    "@cloudflare/next-on-pages": "^1.11.2",
+    "drizzle-kit": "^0.21.1",
+    "@cloudflare/workers-types": "^4.20240512.0"
+  }
+}
