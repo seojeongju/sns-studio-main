@@ -7,9 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "pages:build": "npx @cloudflare/next-on-pages",
-    "preview": "npm run pages:build && wrangler pages dev .vercel/output --compatibility-date=2024-04-03 --compatibility-flags=nodejs_compat",
-    "deploy": "npm run pages:build && wrangler pages deploy .vercel/output"
+    "pages:build": "npx @opennextjs/cloudflare build",
+    "preview": "npm run pages:build && wrangler pages dev",
+    "deploy": "npm run pages:build && wrangler pages deploy"
   },
   "dependencies": {
     "next": "15.3.1",
@@ -31,7 +31,7 @@
     "eslint": "^8",
     "eslint-config-next": "15.3.1",
     "wrangler": "^3.55.0",
-    "@cloudflare/next-on-pages": "^1.11.2",
+    "@opennextjs/cloudflare": "latest",
     "drizzle-kit": "^0.21.1",
     "@cloudflare/workers-types": "^4.20240512.0"
   }
