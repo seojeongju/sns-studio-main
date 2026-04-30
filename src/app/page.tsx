@@ -1,4 +1,6 @@
 import React from 'react';
+
+export const runtime = 'edge'; // Cloudflare Pages Edge Runtime 필수 선언
 import { 
   LayoutDashboard, 
   Send, 

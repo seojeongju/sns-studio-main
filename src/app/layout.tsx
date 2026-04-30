@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
+export const runtime = 'edge'; // Cloudflare Pages Edge Runtime 필수 선언
+
+
 export const metadata: Metadata = {
   title: "BrightBean Studio | Social Media Management",
   description: "Next-generation open source social media management for creators and agencies.",
