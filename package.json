@@ -12,7 +12,7 @@
     "deploy": "npm run pages:build && wrangler pages deploy .vercel/output"
   },
   "dependencies": {
-    "next": "14.2.3",
+    "next": "15.3.1",
     "react": "^18",
     "react-dom": "^18",
     "lucide-react": "^0.378.0",
@@ -29,7 +29,7 @@
     "autoprefixer": "^10.4.19",
     "tailwindcss": "^3.4.1",
     "eslint": "^8",
-    "eslint-config-next": "14.2.3",
+    "eslint-config-next": "15.3.1",
     "wrangler": "^3.55.0",
     "@cloudflare/next-on-pages": "^1.11.2",
     "drizzle-kit": "^0.21.1",
