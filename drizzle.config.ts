@@ -1,11 +1,10 @@
-import type { Config } from 'drizzle-kit';
+import { defineConfig } from 'drizzle-kit';
 
-export default {
+export default defineConfig({
   schema: './src/lib/schema.ts',
   out: './migrations',
-  driver: 'd1',
+  dialect: 'sqlite', // D1은 SQLite 기반
   dbCredentials: {
-    wranglerConfigPath: 'wrangler.toml',
-    dbName: 'sns_studio_db',
+    url: '.wrangler/state/v3/d1/miniflare-D1DatabaseObject/local.sqlite',
   },
-} satisfies Config;
+});
