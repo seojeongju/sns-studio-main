@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
+import { Inter } from "next/font/google";
 import "./globals.css";
+
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "BrightBean Studio | Social Media Management",
@@ -13,10 +16,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <body className="antialiased selection:bg-indigo-500/30">
+      <body className={`${inter.className} antialiased selection:bg-indigo-500/30`}>
         <div className="glow-mesh" />
         {children}
       </body>
     </html>
   );
 }
+
