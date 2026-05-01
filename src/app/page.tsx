@@ -32,11 +32,11 @@ export default function Home() {
 
         <nav className="flex flex-col gap-3">
           {[
-            { icon: LayoutDashboard, label: 'Dashboard', active: true },
-            { icon: Calendar, label: 'Scheduler' },
-            { icon: Send, label: 'Publisher' },
-            { icon: MessageSquare, label: 'Unified Inbox' },
-            { icon: BarChart3, label: 'Analytics' },
+            { icon: LayoutDashboard, label: '대시보드', active: true },
+            { icon: Calendar, label: '예약 관리' },
+            { icon: Send, label: '발행하기' },
+            { icon: MessageSquare, label: '통합 수신함' },
+            { icon: BarChart3, label: '통계 분석' },
           ].map((item) => (
             <button
               key={item.label}
@@ -55,7 +55,7 @@ export default function Home() {
         <div className="mt-auto pt-10 border-t border-white/5">
           <button className="flex items-center gap-4 px-5 py-4 w-full text-white/40 hover:bg-white/5 hover:text-white rounded-2xl transition-all group">
             <Settings className="w-5 h-5 group-hover:rotate-45 transition-transform duration-500" />
-            <span className="font-semibold">Settings</span>
+            <span className="font-semibold">설정</span>
           </button>
         </div>
       </aside>
@@ -64,24 +64,24 @@ export default function Home() {
       <main className="flex-1 p-10 max-w-7xl mx-auto w-full">
         <header className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-12">
           <div>
-            <h1 className="text-4xl font-extrabold text-gradient mb-2 tracking-tight">Dashboard Overview</h1>
-            <p className="text-white/50 text-lg">Good morning, Admin. Here's your social performance today.</p>
+            <h1 className="text-4xl font-extrabold text-gradient mb-2 tracking-tight">대시보드 개요</h1>
+            <p className="text-white/50 text-lg">좋은 아침입니다, 관리자님. 오늘의 소셜 미디어 성과입니다.</p>
           </div>
           <button className="btn-primary flex items-center gap-3">
             <div className="bg-white/20 p-1 rounded-lg">
               <Plus className="w-5 h-5" />
             </div>
-            Create New Post
+            새 포스트 작성
           </button>
         </header>
 
         {/* Stats Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           {[
-            { label: 'Total Reach', value: '1.2M', change: '+12.5%', icon: Globe, color: 'text-emerald-400', bg: 'bg-emerald-500/10' },
-            { label: 'Engagements', value: '45.2K', change: '+8.2%', icon: Users, color: 'text-indigo-400', bg: 'bg-indigo-500/10' },
-            { label: 'Active Posts', value: '124', change: '-2.4%', icon: Activity, color: 'text-rose-400', bg: 'bg-rose-500/10' },
-            { label: 'Growth Rate', value: '18.4%', change: '+4.1%', icon: TrendingUp, color: 'text-amber-400', bg: 'bg-amber-500/10' },
+            { label: '총 도달수', value: '1.2M', change: '+12.5%', icon: Globe, color: 'text-emerald-400', bg: 'bg-emerald-500/10' },
+            { label: '참여도', value: '45.2K', change: '+8.2%', icon: Users, color: 'text-indigo-400', bg: 'bg-indigo-500/10' },
+            { label: '활성 포스트', value: '124', change: '-2.4%', icon: Activity, color: 'text-rose-400', bg: 'bg-rose-500/10' },
+            { label: '성장률', value: '18.4%', change: '+4.1%', icon: TrendingUp, color: 'text-amber-400', bg: 'bg-amber-500/10' },
           ].map((stat, i) => (
             <div key={i} className="glass p-7 rounded-3xl group hover:translate-y-[-4px] transition-all duration-300">
               <div className="flex justify-between items-start mb-4">
@@ -103,20 +103,20 @@ export default function Home() {
           <div className="lg:col-span-2 glass rounded-[2.5rem] p-10 overflow-hidden relative">
             <div className="flex justify-between items-center mb-8">
               <div>
-                <h2 className="text-2xl font-bold mb-1">Upcoming Content</h2>
-                <p className="text-white/40 text-sm">Scheduled posts for the next 7 days</p>
+                <h2 className="text-2xl font-bold mb-1">예정된 콘텐츠</h2>
+                <p className="text-white/40 text-sm">향후 7일간 예약된 포스트</p>
               </div>
               <button className="px-4 py-2 rounded-xl bg-white/5 hover:bg-white/10 text-indigo-400 text-sm font-semibold transition-all">
-                View Calendar
+                캘린더 보기
               </button>
             </div>
             
             <div className="space-y-4">
               {[
-                { title: 'New Product Launch Teaser', platform: 'Instagram', time: 'Tomorrow, 10:00 AM', status: 'Ready' },
-                { title: 'Weekly Tech Insights #42', platform: 'LinkedIn', time: 'Friday, 02:30 PM', status: 'Draft' },
-                { title: 'Customer Success Story', platform: 'Facebook', time: 'May 1, 09:00 AM', status: 'Ready' },
-                { title: 'Behind the Scenes Vlog', platform: 'Youtube', time: 'May 3, 06:00 PM', status: 'Scheduled' },
+                { title: '신제품 출시 티저', platform: 'Instagram', time: '내일, 오전 10:00', status: '준비됨' },
+                { title: '주간 테크 인사이트 #42', platform: 'LinkedIn', time: '금요일, 오후 02:30', status: '초안' },
+                { title: '고객 성공 사례', platform: 'Facebook', time: '5월 1일, 오전 09:00', status: '준비됨' },
+                { title: '비하인드 씬 브이로그', platform: 'Youtube', time: '5월 3일, 오후 06:00', status: '예약됨' },
               ].map((post, i) => (
                 <div key={i} className="flex items-center justify-between p-5 rounded-3xl bg-white/[0.02] border border-white/5 hover:border-white/10 hover:bg-white/[0.04] transition-all cursor-pointer group">
                   <div className="flex items-center gap-5">
@@ -131,8 +131,8 @@ export default function Home() {
                       <div className="flex items-center gap-3">
                         <span className="text-xs text-white/30">{post.time}</span>
                         <span className={`text-[10px] uppercase tracking-wider font-bold px-2 py-0.5 rounded-md ${
-                          post.status === 'Ready' ? 'bg-emerald-500/20 text-emerald-400' : 
-                          post.status === 'Draft' ? 'bg-amber-500/20 text-amber-400' : 'bg-indigo-500/20 text-indigo-400'
+                          post.status === '준비됨' ? 'bg-emerald-500/20 text-emerald-400' : 
+                          post.status === '초안' ? 'bg-amber-500/20 text-amber-400' : 'bg-indigo-500/20 text-indigo-400'
                         }`}>
                           {post.status}
                         </span>
@@ -149,8 +149,8 @@ export default function Home() {
 
           {/* Social Platforms */}
           <div className="glass rounded-[2.5rem] p-10 flex flex-col">
-            <h2 className="text-2xl font-bold mb-2">Connected</h2>
-            <p className="text-white/40 text-sm mb-8">Manage your linked accounts</p>
+            <h2 className="text-2xl font-bold mb-2">연결된 계정</h2>
+            <p className="text-white/40 text-sm mb-8">연결된 소셜 미디어 계정을 관리하세요</p>
             
             <div className="grid grid-cols-1 gap-4 flex-1">
               {[
@@ -166,7 +166,7 @@ export default function Home() {
                     </div>
                     <div>
                       <p className="font-bold">{p.name}</p>
-                      <p className="text-[10px] text-white/30 font-medium">{p.followers} followers</p>
+                      <p className="text-[10px] text-white/30 font-medium">{p.followers} 팔로워</p>
                     </div>
                   </div>
                   <div className={`w-2 h-2 rounded-full ${p.active ? 'bg-emerald-500 animate-pulse shadow-[0_0_8px_rgba(16,185,129,0.6)]' : 'bg-white/10'}`} />
@@ -175,7 +175,7 @@ export default function Home() {
             </div>
             
             <button className="w-full mt-8 py-4 rounded-2xl border-2 border-dashed border-white/5 text-white/30 text-sm font-bold hover:border-indigo-500/30 hover:bg-indigo-500/5 hover:text-indigo-400 transition-all">
-              + Connect New Platform
+              + 새로운 플랫폼 연결
             </button>
           </div>
         </div>

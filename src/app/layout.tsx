@@ -5,8 +5,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "BrightBean Studio | Social Media Management",
-  description: "Next-generation open source social media management for creators and agencies.",
+  title: "BrightBean Studio | 소셜 미디어 관리",
+  description: "크리에이터와 에이전시를 위한 차세대 오픈소스 소셜 미디어 관리 도구입니다.",
 };
 
 export default function RootLayout({
